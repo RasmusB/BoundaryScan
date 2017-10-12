@@ -1,7 +1,10 @@
 #! python3
 
-class TapUnit :
+import collections
+
+class TapUnit:
     def __init__(self):
+        self.name = ''
         self.package = ''
         self.ports = []
         self.pinMap = {}
@@ -11,28 +14,39 @@ class TapUnit :
         self.irLength = 0
         self.instructions = []
         self.irCaptureValue = ''
-        self.idCode =
+        self.idCode = IDcode()
+        self.regAccess = ''
+        self.boundaryLength = 0
+        self.boundaryRegister = []
+        self.designWarning = ''
 
-
-
-    class Port :
+    class Port:
         def __init__(self, name, type, width):
             self.name = name
             self.type = type
             self.width = width
 
-    class Instruction :
+    class Instruction:
         def __init__(self, name, opcode):
             self.name = name
             self.opcode = opcode
 
-    class IDcode :
-        def __init__(self, version, partNo, manufacturer):
-            self.version = version
-            self.partNo = partNo
-            self.manufacturer = manufacturer
+    class IDcode:
+        def __init__(self):
+            self.version = ''
+            self.partNo = ''
+            self.manufacturer = ''
 
-
+    class BoundaryCell:
+        def __init__(self, num, cell, port, function, safe, ccell=None, disval=None, rslt=None):
+            self.num = num
+            self.cell = cell
+            self.port = port
+            self.function = function
+            self.safe = safe
+            self.ccell = ccell
+            self.disval = disval
+            self.rslt = rslt
 
 def openAndCleanFile(filename) :
 
@@ -69,18 +83,19 @@ def openAndCleanFile(filename) :
     # Join broken lines into single lines
     tempLine = ''
 
-    for line in noInlineComments :
+    for line in noInlineComments:
         if ';' in line:
-            tempLine = tempLine + line
+            if tempLine == '':
+                tempLine = line
+            else:
+                tempLine = tempLine + ' ' + line
             codeLines.append(tempLine)
             tempLine = ''
         else :
             tempLine = tempLine + ' ' + line
 
-    for line in codeLines :
+    for line in codeLines:
         temp = line.replace('\t', ' ')
-        temp = temp.split('&')
-        temp = ' '.join(temp)
         temp = temp.split()
         temp = ' '.join(temp)
         temp = temp.strip()
@@ -88,8 +103,20 @@ def openAndCleanFile(filename) :
 
     return finishedLines
 
-
+# Main program here
+entityIndex = []
+nestingLevelDiff = []
 
 inputData = (openAndCleanFile('./test_data/STM32F1_Med_density_LQFP48.bsd'))
-for line in inputData :
-    print(line)
+
+for index, line in enumerate(inputData):
+    keyword = line.split()[0]
+    lineDict = collections.defaultdict(int)
+
+    print('Parsing line ' + str(index) + ': ' + line)
+
+    for char in line :
+        lineDict[char] += 1
+
+    nestingLevelDiff.append(lineDict['('] - lineDict[')'])
+

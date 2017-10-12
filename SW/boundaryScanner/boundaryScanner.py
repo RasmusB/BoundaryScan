@@ -5,6 +5,14 @@ import telnetlib
 HOST = "localhost"
 PORT = 4444
 
+# STM32 specific stuff
+# Should be removed when the BDSL parser works
+OPCODE_BYPASS   = '11111'
+OPCODE_EXTEST   = '00000'
+OPCODE_SAMPLE   = '00010'
+OPCODE_PRELOAD  = '00010'
+OPCODE_IDCODE   = '00001'
+
 class TapUnit :
     def __init__(self, num, name, enabled, IdCode, Expected, IrLen, IrCap, IrMask):
         self.no = num
@@ -40,16 +48,23 @@ def actOnResponse(response) :
 
     # Check what command was sent
     if itemizedLines[0][0] == 'scan_chain' :
-        tapList = []
-        # We sent a command to scan the entire chain and report
-        # what TAPs were detected (if any).
-        for items in itemizedLines[3:] :
-            print(items)
-            tapList.append(TapUnit(*items))
-        print(tapList)
+        return populateTapFromScanChain(itemizedLines)
 
+
+def populateTapFromScanChain (scanResult) :
+    tapList = []
+    # We sent a command to scan the entire chain and report
+    # what TAPs were detected (if any).
+    for items in scanResult[3:] :
+        print(items)
+        tapList.append(TapUnit(*items))
+
+    return tapList
 
 with (telnetlib.Telnet(HOST, PORT)) as terminal:
+    # Clear the welcome message from OpenOCD
     terminal.read_until(b"> ")
+
     temp = sendCommand(terminal, "scan_chain")
-    actOnResponse(temp)
+    discoveredTaps = actOnResponse(temp)
+    print (discoveredTaps)

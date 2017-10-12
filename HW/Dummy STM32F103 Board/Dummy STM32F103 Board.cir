@@ -1,0 +1,11 @@
+* C:\Users\SSSRBV\Work\BoundaryScan\HW\Dummy STM32F103 Board\Dummy STM32F103 Board.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 2017-10-12 12:43:47
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+U1  ? ? ? ? ? ? ? GND +3V3 ? ? ? ? ? ? ? ? /NetThree /NetThree ? ? ? GND +3V3 ? ? ? ? ? ? ? ? ? ? GND +3V3 ? ? /NetThree ? ? ? ? ? ? ? GND +3V3 STM32F103C8Tx		
+
+.end

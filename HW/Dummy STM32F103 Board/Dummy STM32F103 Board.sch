@@ -1,0 +1,204 @@
+EESchema Schematic File Version 2
+LIBS:stm32
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L STM32F103C8Tx U1
+U 1 1 59DF3AEA
+P 5950 3600
+F 0 "U1" H 3150 5325 50  0000 L BNN
+F 1 "STM32F103C8Tx" H 8750 5325 50  0000 R BNN
+F 2 "LQFP48" H 8750 5275 50  0000 R TNN
+F 3 "" H 5950 3600 50  0000 C CNN
+	1    5950 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 3500 2250 3500
+Wire Wire Line
+	2250 3500 2250 3800
+Wire Wire Line
+	2250 3600 3050 3600
+Wire Wire Line
+	2250 3800 3050 3800
+Connection ~ 2250 3600
+Text Label 2250 3500 0    60   ~ 0
+NetThree
+$Comp
+L GND #PWR01
+U 1 1 59DF3B66
+P 5850 5650
+F 0 "#PWR01" H 5850 5400 50  0001 C CNN
+F 1 "GND" H 5850 5500 50  0000 C CNN
+F 2 "" H 5850 5650 50  0000 C CNN
+F 3 "" H 5850 5650 50  0000 C CNN
+	1    5850 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 5400 5750 5550
+Wire Wire Line
+	5750 5550 5950 5550
+Wire Wire Line
+	5950 5550 5950 5400
+Wire Wire Line
+	5850 5400 5850 5650
+Connection ~ 5850 5550
+$Comp
+L GNDA #PWR02
+U 1 1 59DF3BBB
+P 6050 5650
+F 0 "#PWR02" H 6050 5400 50  0001 C CNN
+F 1 "GNDA" H 6050 5500 50  0000 C CNN
+F 2 "" H 6050 5650 50  0000 C CNN
+F 3 "" H 6050 5650 50  0000 C CNN
+	1    6050 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 5400 6050 5650
+$Comp
+L GND #PWR03
+U 1 1 59DF3BDD
+P 5850 6200
+F 0 "#PWR03" H 5850 5950 50  0001 C CNN
+F 1 "GND" H 5850 6050 50  0000 C CNN
+F 2 "" H 5850 6200 50  0000 C CNN
+F 3 "" H 5850 6200 50  0000 C CNN
+	1    5850 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR04
+U 1 1 59DF3BE4
+P 6050 6200
+F 0 "#PWR04" H 6050 5950 50  0001 C CNN
+F 1 "GNDA" H 6050 6050 50  0000 C CNN
+F 2 "" H 6050 6200 50  0000 C CNN
+F 3 "" H 6050 6200 50  0000 C CNN
+	1    6050 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 6200 5850 6100
+Wire Wire Line
+	5850 6100 6050 6100
+Wire Wire Line
+	6050 6100 6050 6200
+$Comp
+L +3V3 #PWR05
+U 1 1 59DF3C16
+P 5600 950
+F 0 "#PWR05" H 5600 800 50  0001 C CNN
+F 1 "+3V3" H 5600 1090 50  0000 C CNN
+F 2 "" H 5600 950 50  0000 C CNN
+F 3 "" H 5600 950 50  0000 C CNN
+	1    5600 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L VDDA #PWR06
+U 1 1 59DF3C2C
+P 6050 1450
+F 0 "#PWR06" H 6050 1300 50  0001 C CNN
+F 1 "VDDA" H 6050 1600 50  0000 C CNN
+F 2 "" H 6050 1450 50  0000 C CNN
+F 3 "" H 6050 1450 50  0000 C CNN
+	1    6050 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 1450 6050 1800
+$Comp
+L VDD #PWR07
+U 1 1 59DF3C62
+P 5850 1450
+F 0 "#PWR07" H 5850 1300 50  0001 C CNN
+F 1 "VDD" H 5850 1600 50  0000 C CNN
+F 2 "" H 5850 1450 50  0000 C CNN
+F 3 "" H 5850 1450 50  0000 C CNN
+	1    5850 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 1450 5850 1800
+Wire Wire Line
+	5950 1600 5950 1800
+Wire Wire Line
+	5750 1600 5950 1600
+Connection ~ 5850 1600
+Wire Wire Line
+	5750 1600 5750 1800
+$Comp
+L VDDA #PWR08
+U 1 1 59DF3CB3
+P 6050 950
+F 0 "#PWR08" H 6050 800 50  0001 C CNN
+F 1 "VDDA" H 6050 1100 50  0000 C CNN
+F 2 "" H 6050 950 50  0000 C CNN
+F 3 "" H 6050 950 50  0000 C CNN
+	1    6050 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L VDD #PWR09
+U 1 1 59DF3CB9
+P 5850 950
+F 0 "#PWR09" H 5850 800 50  0001 C CNN
+F 1 "VDD" H 5850 1100 50  0000 C CNN
+F 2 "" H 5850 950 50  0000 C CNN
+F 3 "" H 5850 950 50  0000 C CNN
+	1    5850 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 950  5600 1050
+Wire Wire Line
+	5600 1050 6050 1050
+Wire Wire Line
+	5850 1050 5850 950 
+Wire Wire Line
+	6050 1050 6050 950 
+Connection ~ 5850 1050
+$EndSCHEMATC

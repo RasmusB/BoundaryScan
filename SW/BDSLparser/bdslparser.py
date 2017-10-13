@@ -1,11 +1,12 @@
 #! python3
 
+import shlex
 import collections
 
 class TapUnit:
     def __init__(self):
-        self.name = ''
-        self.package = ''
+        self.entity = ''
+        self.physicalPinMap = ''
         self.ports = []
         self.pinMap = {}
         # Not sure what to to with this information
@@ -14,7 +15,7 @@ class TapUnit:
         self.irLength = 0
         self.instructions = []
         self.irCaptureValue = ''
-        self.idCode = IDcode()
+        self.idCode = None
         self.regAccess = ''
         self.boundaryLength = 0
         self.boundaryRegister = []
@@ -104,19 +105,30 @@ def openAndCleanFile(filename) :
     return finishedLines
 
 # Main program here
-entityIndex = []
-nestingLevelDiff = []
+inputFile = './test_data/STM32F1_Med_density_LQFP48.bsd'
+tapInstance = TapUnit()
 
-inputData = (openAndCleanFile('./test_data/STM32F1_Med_density_LQFP48.bsd'))
+# Parsing data helpers
+nestingLevel = []
+subsetOf = []
+
+print(list(shlex.shlex(open(inputFile))))
+
+inputData = (openAndCleanFile(inputFile))
 
 for index, line in enumerate(inputData):
-    keyword = line.split()[0]
     lineDict = collections.defaultdict(int)
-
-    print('Parsing line ' + str(index) + ': ' + line)
 
     for char in line :
         lineDict[char] += 1
 
-    nestingLevelDiff.append(lineDict['('] - lineDict[')'])
+    if index != 0:
+        nestingLevel.append(lineDict['('] - lineDict[')'] + nestingLevel[index - 1])
+    else:
+        nestingLevel.append(lineDict['('] - lineDict[')'])
 
+    if nestingLevel[index] == 0:
+        keyword = line.split()[0]
+        if keyword == 'entity':
+            tapInstance.entity = line.split()[1]
+            print(line.split())

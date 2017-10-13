@@ -36,10 +36,10 @@
   - [ ] Figure out how BS is done.
     - [State handling in JTAG](http://www.fpga4fun.com/JTAG2.html)
     - [Run a boundary-scan](http://www.fpga4fun.com/JTAG4.html)
-    1. First we need to get to a known state. For example, we could issue the commands:
-      - `pathmove RESET RUN/IDLE DRSELECT IRSELECT IRCAPTURE IRSHIFT`
+      1. First we need to get to a known state. For example, we could issue the commands:
+        - `pathmove RESET RUN/IDLE DRSELECT IRSELECT IRCAPTURE IRSHIFT`
       This _should_ place us in the IRSHIFT state (how to verify)
-    1. Now we can shift instruction data into the chain
+      1. Now we can shift instruction data into the chain
   - This won't do much for us if we don't know what connections our target implements. We need some way to go from a netlist to a mapping of the actual I/O of the chips in the chain. This might both be tricky and impose some limitations for the footprints! A naive approach (but pretty fool-proof) would be to match the pin numbers that are present in both the netlist and the .bsdl file. This assumes unique pin numbers, but that is usually the case anyway. If the JTAG net names used in the netlist are known, we should be able to determine the scan chain order from the netlist.
 
 ## BSDL to Python device structure

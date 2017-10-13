@@ -1,6 +1,6 @@
 #! python3
 
-import shlex
+import hdlparse
 import collections
 
 class TapUnit:

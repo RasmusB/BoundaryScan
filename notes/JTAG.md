@@ -38,7 +38,11 @@
     - [Run a boundary-scan](http://www.fpga4fun.com/JTAG4.html)
       1. First we need to get to a known state. For example, we could issue the commands:
         - `pathmove RESET RUN/IDLE DRSELECT IRSELECT IRCAPTURE IRSHIFT`
-      This _should_ place us in the IRSHIFT state (how to verify)
+        - This _should_ place us in the IRSHIFT state
+          - The OpenOCD debugging output claims that we are in the `RESET` state...
+        - Now we should try to put TAP 0 (`cpu`) into `BYPASS` state, and TAP 1 into `SAMPLE` state.
+          - `irscan stm32f103.bs 2` -- this should put `cpu` in bypass mode
+          - `runtest 400` -- clocks 400 clock cycles. But I can't see any output?
       1. Now we can shift instruction data into the chain
   - This won't do much for us if we don't know what connections our target implements. We need some way to go from a netlist to a mapping of the actual I/O of the chips in the chain. This might both be tricky and impose some limitations for the footprints! A naive approach (but pretty fool-proof) would be to match the pin numbers that are present in both the netlist and the .bsdl file. This assumes unique pin numbers, but that is usually the case anyway. If the JTAG net names used in the netlist are known, we should be able to determine the scan chain order from the netlist.
 

@@ -1,6 +1,5 @@
 #! python3
 
-import hdlparse
 import collections
 
 class TapUnit:
@@ -49,7 +48,7 @@ class TapUnit:
             self.disval = disval
             self.rslt = rslt
 
-def openAndCleanFile(filename) :
+def openAndCleanFile(filename):
 
     fileContents = []
     noWhiteSpace = []
@@ -112,9 +111,9 @@ tapInstance = TapUnit()
 nestingLevel = []
 subsetOf = []
 
-print(list(shlex.shlex(open(inputFile))))
-
 inputData = (openAndCleanFile(inputFile))
+
+# Test external libraries here
 
 for index, line in enumerate(inputData):
     lineDict = collections.defaultdict(int)

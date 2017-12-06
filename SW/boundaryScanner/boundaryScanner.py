@@ -1,6 +1,7 @@
 #! python3
 
 import telnetlib
+import sExpressionParser
 
 HOST = "localhost"
 PORT = 4444

@@ -1,6 +1,7 @@
 #! python3
 
 import collections
+import hdlparse.vhdl_parser as vhdl
 
 class TapUnit:
     def __init__(self):
@@ -114,6 +115,7 @@ subsetOf = []
 inputData = (openAndCleanFile(inputFile))
 
 # Test external libraries here
+vhdl_ex = vhdl.VhdlExtractor()
 
 for index, line in enumerate(inputData):
     lineDict = collections.defaultdict(int)

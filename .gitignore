@@ -1,3 +1,13 @@
 
 SW/BDSLparser/.idea/workspace.xml
 SW/BDSLparser/.idea/misc.xml
+*.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+SW/BSDLparser/.idea/.name
+SW/BSDLparser/.idea/misc.xml
+SW/BSDLparser/.idea/modules.xml
+SW/BSDLparser/.idea/vcs.xml
+SW/BSDLparser/.idea/workspace.xml
+*.pyc

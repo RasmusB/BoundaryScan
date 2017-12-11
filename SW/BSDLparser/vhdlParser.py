@@ -2107,6 +2107,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitAbstract_literal" ):
                 listener.exitAbstract_literal(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAbstract_literal" ):
+                return visitor.visitAbstract_literal(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2155,6 +2161,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAccess_type_definition" ):
                 listener.exitAccess_type_definition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAccess_type_definition" ):
+                return visitor.visitAccess_type_definition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2211,6 +2223,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAcross_aspect" ):
                 listener.exitAcross_aspect(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAcross_aspect" ):
+                return visitor.visitAcross_aspect(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2276,6 +2294,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitActual_designator" ):
                 listener.exitActual_designator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitActual_designator" ):
+                return visitor.visitActual_designator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2329,6 +2353,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitActual_parameter_part" ):
                 listener.exitActual_parameter_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitActual_parameter_part" ):
+                return visitor.visitActual_parameter_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2378,6 +2408,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitActual_part" ):
                 listener.exitActual_part(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitActual_part" ):
+                return visitor.visitActual_part(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2443,6 +2479,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitAdding_operator" ):
                 listener.exitAdding_operator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAdding_operator" ):
+                return visitor.visitAdding_operator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2503,6 +2545,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAggregate" ):
                 listener.exitAggregate(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAggregate" ):
+                return visitor.visitAggregate(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2585,6 +2633,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitAlias_declaration" ):
                 listener.exitAlias_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlias_declaration" ):
+                return visitor.visitAlias_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2658,6 +2712,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitAlias_designator" ):
                 listener.exitAlias_designator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlias_designator" ):
+                return visitor.visitAlias_designator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2720,6 +2780,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitAlias_indication" ):
                 listener.exitAlias_indication(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAlias_indication" ):
+                return visitor.visitAlias_indication(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2779,6 +2845,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAllocator" ):
                 listener.exitAllocator(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAllocator" ):
+                return visitor.visitAllocator(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2866,6 +2938,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitArchitecture_body" ):
                 listener.exitArchitecture_body(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArchitecture_body" ):
+                return visitor.visitArchitecture_body(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2943,6 +3021,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitArchitecture_declarative_part" ):
                 listener.exitArchitecture_declarative_part(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArchitecture_declarative_part" ):
+                return visitor.visitArchitecture_declarative_part(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3031,6 +3115,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitArchitecture_statement" ):
                 listener.exitArchitecture_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArchitecture_statement" ):
+                return visitor.visitArchitecture_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3162,6 +3252,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitArchitecture_statement_part" ):
                 listener.exitArchitecture_statement_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArchitecture_statement_part" ):
+                return visitor.visitArchitecture_statement_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3214,6 +3310,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitArray_nature_definition" ):
                 listener.exitArray_nature_definition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArray_nature_definition" ):
+                return visitor.visitArray_nature_definition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3271,6 +3373,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitArray_type_definition" ):
                 listener.exitArray_type_definition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArray_type_definition" ):
+                return visitor.visitArray_type_definition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3340,6 +3448,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAssertion" ):
                 listener.exitAssertion(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssertion" ):
+                return visitor.visitAssertion(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3411,6 +3525,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitAssertion_statement" ):
                 listener.exitAssertion_statement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssertion_statement" ):
+                return visitor.visitAssertion_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3468,6 +3588,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAssociation_element" ):
                 listener.exitAssociation_element(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssociation_element" ):
+                return visitor.visitAssociation_element(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3527,6 +3653,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAssociation_list" ):
                 listener.exitAssociation_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssociation_list" ):
+                return visitor.visitAssociation_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3591,6 +3723,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitAttribute_declaration" ):
                 listener.exitAttribute_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAttribute_declaration" ):
+                return visitor.visitAttribute_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3654,6 +3792,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAttribute_designator" ):
                 listener.exitAttribute_designator(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAttribute_designator" ):
+                return visitor.visitAttribute_designator(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3753,6 +3897,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitAttribute_specification" ):
                 listener.exitAttribute_specification(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAttribute_specification" ):
+                return visitor.visitAttribute_specification(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3808,6 +3958,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitBase_unit_declaration" ):
                 listener.exitBase_unit_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBase_unit_declaration" ):
+                return visitor.visitBase_unit_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -3860,6 +4016,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBinding_indication" ):
                 listener.exitBinding_indication(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBinding_indication" ):
+                return visitor.visitBinding_indication(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -3951,6 +4113,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBlock_configuration" ):
                 listener.exitBlock_configuration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlock_configuration" ):
+                return visitor.visitBlock_configuration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -4104,6 +4272,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBlock_declarative_item" ):
                 listener.exitBlock_declarative_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlock_declarative_item" ):
+                return visitor.visitBlock_declarative_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -4281,6 +4455,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitBlock_declarative_part" ):
                 listener.exitBlock_declarative_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlock_declarative_part" ):
+                return visitor.visitBlock_declarative_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4347,6 +4527,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBlock_header" ):
                 listener.exitBlock_header(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlock_header" ):
+                return visitor.visitBlock_header(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -4436,6 +4622,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBlock_specification" ):
                 listener.exitBlock_specification(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlock_specification" ):
+                return visitor.visitBlock_specification(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -4547,6 +4739,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitBlock_statement" ):
                 listener.exitBlock_statement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlock_statement" ):
+                return visitor.visitBlock_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4635,6 +4833,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitBlock_statement_part" ):
                 listener.exitBlock_statement_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlock_statement_part" ):
+                return visitor.visitBlock_statement_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4697,6 +4901,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBranch_quantity_declaration" ):
                 listener.exitBranch_quantity_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBranch_quantity_declaration" ):
+                return visitor.visitBranch_quantity_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -4769,6 +4979,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitBreak_element" ):
                 listener.exitBreak_element(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBreak_element" ):
+                return visitor.visitBreak_element(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4831,6 +5047,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitBreak_list" ):
                 listener.exitBreak_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBreak_list" ):
+                return visitor.visitBreak_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -4889,6 +5111,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBreak_selector_clause" ):
                 listener.exitBreak_selector_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBreak_selector_clause" ):
+                return visitor.visitBreak_selector_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -4950,6 +5178,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitBreak_statement" ):
                 listener.exitBreak_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBreak_statement" ):
+                return visitor.visitBreak_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5050,6 +5284,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitCase_statement" ):
                 listener.exitCase_statement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCase_statement" ):
+                return visitor.visitCase_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5139,6 +5379,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitCase_statement_alternative" ):
                 listener.exitCase_statement_alternative(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCase_statement_alternative" ):
+                return visitor.visitCase_statement_alternative(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5195,6 +5441,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitChoice" ):
                 listener.exitChoice(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitChoice" ):
+                return visitor.visitChoice(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5269,6 +5521,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitChoices" ):
                 listener.exitChoices(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitChoices" ):
+                return visitor.visitChoices(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5345,6 +5603,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitComponent_configuration" ):
                 listener.exitComponent_configuration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitComponent_configuration" ):
+                return visitor.visitComponent_configuration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5438,6 +5702,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitComponent_declaration" ):
                 listener.exitComponent_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitComponent_declaration" ):
+                return visitor.visitComponent_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5535,6 +5805,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitComponent_instantiation_statement" ):
                 listener.exitComponent_instantiation_statement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitComponent_instantiation_statement" ):
+                return visitor.visitComponent_instantiation_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5603,6 +5879,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitComponent_specification" ):
                 listener.exitComponent_specification(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitComponent_specification" ):
+                return visitor.visitComponent_specification(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -5650,6 +5932,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitComposite_nature_definition" ):
                 listener.exitComposite_nature_definition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitComposite_nature_definition" ):
+                return visitor.visitComposite_nature_definition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5707,6 +5995,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitComposite_type_definition" ):
                 listener.exitComposite_type_definition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitComposite_type_definition" ):
+                return visitor.visitComposite_type_definition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5770,6 +6064,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConcurrent_assertion_statement" ):
                 listener.exitConcurrent_assertion_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConcurrent_assertion_statement" ):
+                return visitor.visitConcurrent_assertion_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5850,6 +6150,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConcurrent_break_statement" ):
                 listener.exitConcurrent_break_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConcurrent_break_statement" ):
+                return visitor.visitConcurrent_break_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -5938,6 +6244,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitConcurrent_procedure_call_statement" ):
                 listener.exitConcurrent_procedure_call_statement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConcurrent_procedure_call_statement" ):
+                return visitor.visitConcurrent_procedure_call_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6008,6 +6320,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitConcurrent_signal_assignment_statement" ):
                 listener.exitConcurrent_signal_assignment_statement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConcurrent_signal_assignment_statement" ):
+                return visitor.visitConcurrent_signal_assignment_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6077,6 +6395,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitCondition" ):
                 listener.exitCondition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCondition" ):
+                return visitor.visitCondition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6119,6 +6443,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitCondition_clause" ):
                 listener.exitCondition_clause(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitCondition_clause" ):
+                return visitor.visitCondition_clause(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6175,6 +6505,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConditional_signal_assignment" ):
                 listener.exitConditional_signal_assignment(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConditional_signal_assignment" ):
+                return visitor.visitConditional_signal_assignment(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6237,6 +6573,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConditional_waveforms" ):
                 listener.exitConditional_waveforms(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConditional_waveforms" ):
+                return visitor.visitConditional_waveforms(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6332,6 +6674,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitConfiguration_declaration" ):
                 listener.exitConfiguration_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConfiguration_declaration" ):
+                return visitor.visitConfiguration_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6413,6 +6761,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitConfiguration_declarative_item" ):
                 listener.exitConfiguration_declarative_item(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConfiguration_declarative_item" ):
+                return visitor.visitConfiguration_declarative_item(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6474,6 +6828,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitConfiguration_declarative_part" ):
                 listener.exitConfiguration_declarative_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConfiguration_declarative_part" ):
+                return visitor.visitConfiguration_declarative_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6526,6 +6886,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConfiguration_item" ):
                 listener.exitConfiguration_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConfiguration_item" ):
+                return visitor.visitConfiguration_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6589,6 +6955,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConfiguration_specification" ):
                 listener.exitConfiguration_specification(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConfiguration_specification" ):
+                return visitor.visitConfiguration_specification(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6655,6 +7027,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConstant_declaration" ):
                 listener.exitConstant_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstant_declaration" ):
+                return visitor.visitConstant_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6725,6 +7103,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitConstrained_array_definition" ):
                 listener.exitConstrained_array_definition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstrained_array_definition" ):
+                return visitor.visitConstrained_array_definition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6781,6 +7165,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitConstrained_nature_definition" ):
                 listener.exitConstrained_nature_definition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstrained_nature_definition" ):
+                return visitor.visitConstrained_nature_definition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6830,6 +7220,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitConstraint" ):
                 listener.exitConstraint(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitConstraint" ):
+                return visitor.visitConstraint(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -6887,6 +7283,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitContext_clause" ):
                 listener.exitContext_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitContext_clause" ):
+                return visitor.visitContext_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -6939,6 +7341,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitContext_item" ):
                 listener.exitContext_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitContext_item" ):
+                return visitor.visitContext_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7001,6 +7409,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDelay_mechanism" ):
                 listener.exitDelay_mechanism(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDelay_mechanism" ):
+                return visitor.visitDelay_mechanism(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7072,6 +7486,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitDesign_file" ):
                 listener.exitDesign_file(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDesign_file" ):
+                return visitor.visitDesign_file(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7127,6 +7547,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitDesign_unit" ):
                 listener.exitDesign_unit(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDesign_unit" ):
+                return visitor.visitDesign_unit(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7171,6 +7597,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDesignator" ):
                 listener.exitDesignator(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDesignator" ):
+                return visitor.visitDesignator(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7226,6 +7658,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDirection" ):
                 listener.exitDirection(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDirection" ):
+                return visitor.visitDirection(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7286,6 +7724,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitDisconnection_specification" ):
                 listener.exitDisconnection_specification(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDisconnection_specification" ):
+                return visitor.visitDisconnection_specification(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7337,6 +7781,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitDiscrete_range" ):
                 listener.exitDiscrete_range(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDiscrete_range" ):
+                return visitor.visitDiscrete_range(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7398,6 +7848,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitElement_association" ):
                 listener.exitElement_association(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitElement_association" ):
+                return visitor.visitElement_association(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7458,6 +7914,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitElement_declaration" ):
                 listener.exitElement_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitElement_declaration" ):
+                return visitor.visitElement_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7504,6 +7966,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitElement_subnature_definition" ):
                 listener.exitElement_subnature_definition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitElement_subnature_definition" ):
+                return visitor.visitElement_subnature_definition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7543,6 +8011,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitElement_subtype_definition" ):
                 listener.exitElement_subtype_definition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitElement_subtype_definition" ):
+                return visitor.visitElement_subtype_definition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7602,6 +8076,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEntity_aspect" ):
                 listener.exitEntity_aspect(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntity_aspect" ):
+                return visitor.visitEntity_aspect(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7737,6 +8217,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitEntity_class" ):
                 listener.exitEntity_class(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntity_class" ):
+                return visitor.visitEntity_class(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -7785,6 +8271,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEntity_class_entry" ):
                 listener.exitEntity_class_entry(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntity_class_entry" ):
+                return visitor.visitEntity_class_entry(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7843,6 +8335,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEntity_class_entry_list" ):
                 listener.exitEntity_class_entry_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntity_class_entry_list" ):
+                return visitor.visitEntity_class_entry_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -7929,6 +8427,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEntity_declaration" ):
                 listener.exitEntity_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntity_declaration" ):
+                return visitor.visitEntity_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8084,6 +8588,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEntity_declarative_item" ):
                 listener.exitEntity_declarative_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntity_declarative_item" ):
+                return visitor.visitEntity_declarative_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8249,6 +8759,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitEntity_declarative_part" ):
                 listener.exitEntity_declarative_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntity_declarative_part" ):
+                return visitor.visitEntity_declarative_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8302,6 +8818,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitEntity_designator" ):
                 listener.exitEntity_designator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntity_designator" ):
+                return visitor.visitEntity_designator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8354,6 +8876,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEntity_header" ):
                 listener.exitEntity_header(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntity_header" ):
+                return visitor.visitEntity_header(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8424,6 +8952,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEntity_name_list" ):
                 listener.exitEntity_name_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntity_name_list" ):
+                return visitor.visitEntity_name_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8503,6 +9037,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitEntity_specification" ):
                 listener.exitEntity_specification(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntity_specification" ):
+                return visitor.visitEntity_specification(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8554,6 +9094,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEntity_statement" ):
                 listener.exitEntity_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntity_statement" ):
+                return visitor.visitEntity_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8617,6 +9163,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitEntity_statement_part" ):
                 listener.exitEntity_statement_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntity_statement_part" ):
+                return visitor.visitEntity_statement_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -8671,6 +9223,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEntity_tag" ):
                 listener.exitEntity_tag(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEntity_tag" ):
+                return visitor.visitEntity_tag(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8732,6 +9290,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEnumeration_literal" ):
                 listener.exitEnumeration_literal(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEnumeration_literal" ):
+                return visitor.visitEnumeration_literal(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8800,6 +9364,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEnumeration_type_definition" ):
                 listener.exitEnumeration_type_definition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEnumeration_type_definition" ):
+                return visitor.visitEnumeration_type_definition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8874,6 +9444,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExit_statement" ):
                 listener.exitExit_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExit_statement" ):
+                return visitor.visitExit_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -8954,6 +9530,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitExpression" ):
                 listener.exitExpression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpression" ):
+                return visitor.visitExpression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9018,6 +9600,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFactor" ):
                 listener.exitFactor(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFactor" ):
+                return visitor.visitFactor(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9108,6 +9696,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitFile_declaration" ):
                 listener.exitFile_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFile_declaration" ):
+                return visitor.visitFile_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9165,6 +9759,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitFile_logical_name" ):
                 listener.exitFile_logical_name(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFile_logical_name" ):
+                return visitor.visitFile_logical_name(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9214,6 +9814,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFile_open_information" ):
                 listener.exitFile_open_information(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFile_open_information" ):
+                return visitor.visitFile_open_information(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9274,6 +9880,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitFile_type_definition" ):
                 listener.exitFile_type_definition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFile_type_definition" ):
+                return visitor.visitFile_type_definition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9317,6 +9929,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFormal_parameter_list" ):
                 listener.exitFormal_parameter_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFormal_parameter_list" ):
+                return visitor.visitFormal_parameter_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9367,6 +9985,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFormal_part" ):
                 listener.exitFormal_part(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFormal_part" ):
+                return visitor.visitFormal_part(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9446,6 +10070,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitFree_quantity_declaration" ):
                 listener.exitFree_quantity_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFree_quantity_declaration" ):
+                return visitor.visitFree_quantity_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9542,6 +10172,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGenerate_statement" ):
                 listener.exitGenerate_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGenerate_statement" ):
+                return visitor.visitGenerate_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9640,6 +10276,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitGeneration_scheme" ):
                 listener.exitGeneration_scheme(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGeneration_scheme" ):
+                return visitor.visitGeneration_scheme(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9709,6 +10351,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitGeneric_clause" ):
                 listener.exitGeneric_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGeneric_clause" ):
+                return visitor.visitGeneric_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9765,6 +10413,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGeneric_list" ):
                 listener.exitGeneric_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGeneric_list" ):
+                return visitor.visitGeneric_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9831,6 +10485,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitGeneric_map_aspect" ):
                 listener.exitGeneric_map_aspect(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGeneric_map_aspect" ):
+                return visitor.visitGeneric_map_aspect(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -9881,6 +10541,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGroup_constituent" ):
                 listener.exitGroup_constituent(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGroup_constituent" ):
+                return visitor.visitGroup_constituent(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -9943,6 +10609,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitGroup_constituent_list" ):
                 listener.exitGroup_constituent_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGroup_constituent_list" ):
+                return visitor.visitGroup_constituent_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10017,6 +10689,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitGroup_declaration" ):
                 listener.exitGroup_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGroup_declaration" ):
+                return visitor.visitGroup_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10088,6 +10766,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitGroup_template_declaration" ):
                 listener.exitGroup_template_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGroup_template_declaration" ):
+                return visitor.visitGroup_template_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10147,6 +10831,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitGuarded_signal_specification" ):
                 listener.exitGuarded_signal_specification(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGuarded_signal_specification" ):
+                return visitor.visitGuarded_signal_specification(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10192,6 +10882,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIdentifier" ):
                 listener.exitIdentifier(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIdentifier" ):
+                return visitor.visitIdentifier(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10247,6 +10943,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIdentifier_list" ):
                 listener.exitIdentifier_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIdentifier_list" ):
+                return visitor.visitIdentifier_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10345,6 +11047,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIf_statement" ):
                 listener.exitIf_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIf_statement" ):
+                return visitor.visitIf_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10456,6 +11164,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitIndex_constraint" ):
                 listener.exitIndex_constraint(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndex_constraint" ):
+                return visitor.visitIndex_constraint(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10517,6 +11231,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitIndex_specification" ):
                 listener.exitIndex_specification(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndex_specification" ):
+                return visitor.visitIndex_specification(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10575,6 +11295,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIndex_subtype_definition" ):
                 listener.exitIndex_subtype_definition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndex_subtype_definition" ):
+                return visitor.visitIndex_subtype_definition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10638,6 +11364,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInstantiated_unit" ):
                 listener.exitInstantiated_unit(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInstantiated_unit" ):
+                return visitor.visitInstantiated_unit(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10737,6 +11469,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitInstantiation_list" ):
                 listener.exitInstantiation_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInstantiation_list" ):
+                return visitor.visitInstantiation_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10827,6 +11565,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInterface_constant_declaration" ):
                 listener.exitInterface_constant_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterface_constant_declaration" ):
+                return visitor.visitInterface_constant_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -10919,6 +11663,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitInterface_declaration" ):
                 listener.exitInterface_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterface_declaration" ):
+                return visitor.visitInterface_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -10996,6 +11746,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitInterface_element" ):
                 listener.exitInterface_element(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterface_element" ):
+                return visitor.visitInterface_element(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11045,6 +11801,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInterface_file_declaration" ):
                 listener.exitInterface_file_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterface_file_declaration" ):
+                return visitor.visitInterface_file_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11100,6 +11862,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInterface_signal_list" ):
                 listener.exitInterface_signal_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterface_signal_list" ):
+                return visitor.visitInterface_signal_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11163,6 +11931,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitInterface_port_list" ):
                 listener.exitInterface_port_list(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterface_port_list" ):
+                return visitor.visitInterface_port_list(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11224,6 +11998,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInterface_list" ):
                 listener.exitInterface_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterface_list" ):
+                return visitor.visitInterface_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11300,6 +12080,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInterface_quantity_declaration" ):
                 listener.exitInterface_quantity_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterface_quantity_declaration" ):
+                return visitor.visitInterface_quantity_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11392,6 +12178,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitInterface_port_declaration" ):
                 listener.exitInterface_port_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterface_port_declaration" ):
+                return visitor.visitInterface_port_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11481,6 +12273,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitInterface_signal_declaration" ):
                 listener.exitInterface_signal_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterface_signal_declaration" ):
+                return visitor.visitInterface_signal_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11564,6 +12362,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitInterface_terminal_declaration" ):
                 listener.exitInterface_terminal_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterface_terminal_declaration" ):
+                return visitor.visitInterface_terminal_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11630,6 +12434,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitInterface_variable_declaration" ):
                 listener.exitInterface_variable_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitInterface_variable_declaration" ):
+                return visitor.visitInterface_variable_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11712,6 +12522,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitIteration_scheme" ):
                 listener.exitIteration_scheme(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIteration_scheme" ):
+                return visitor.visitIteration_scheme(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11772,6 +12588,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitLabel_colon" ):
                 listener.exitLabel_colon(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLabel_colon" ):
+                return visitor.visitLabel_colon(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11820,6 +12642,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitLibrary_clause" ):
                 listener.exitLibrary_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLibrary_clause" ):
+                return visitor.visitLibrary_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -11867,6 +12695,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLibrary_unit" ):
                 listener.exitLibrary_unit(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLibrary_unit" ):
+                return visitor.visitLibrary_unit(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -11933,6 +12767,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLiteral" ):
                 listener.exitLiteral(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLiteral" ):
+                return visitor.visitLiteral(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12002,6 +12842,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitLogical_name" ):
                 listener.exitLogical_name(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLogical_name" ):
+                return visitor.visitLogical_name(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12050,6 +12896,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLogical_name_list" ):
                 listener.exitLogical_name_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLogical_name_list" ):
+                return visitor.visitLogical_name_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12117,6 +12969,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLogical_operator" ):
                 listener.exitLogical_operator(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLogical_operator" ):
+                return visitor.visitLogical_operator(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12187,6 +13045,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitLoop_statement" ):
                 listener.exitLoop_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLoop_statement" ):
+                return visitor.visitLoop_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12272,6 +13136,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSignal_mode" ):
                 listener.exitSignal_mode(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSignal_mode" ):
+                return visitor.visitSignal_mode(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12325,6 +13195,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMultiplying_operator" ):
                 listener.exitMultiplying_operator(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMultiplying_operator" ):
+                return visitor.visitMultiplying_operator(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12384,6 +13260,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitName" ):
                 listener.exitName(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitName" ):
+                return visitor.visitName(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12463,6 +13345,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitName_part" ):
                 listener.exitName_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitName_part" ):
+                return visitor.visitName_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12535,6 +13423,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitName_attribute_part" ):
                 listener.exitName_attribute_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitName_attribute_part" ):
+                return visitor.visitName_attribute_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12603,6 +13497,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitName_function_call_or_indexed_part" ):
                 listener.exitName_function_call_or_indexed_part(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitName_function_call_or_indexed_part" ):
+                return visitor.visitName_function_call_or_indexed_part(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12675,6 +13575,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitName_slice_part" ):
                 listener.exitName_slice_part(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitName_slice_part" ):
+                return visitor.visitName_slice_part(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12758,6 +13664,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSelected_name" ):
                 listener.exitSelected_name(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSelected_name" ):
+                return visitor.visitSelected_name(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12824,6 +13736,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitNature_declaration" ):
                 listener.exitNature_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNature_declaration" ):
+                return visitor.visitNature_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12875,6 +13793,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNature_definition" ):
                 listener.exitNature_definition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNature_definition" ):
+                return visitor.visitNature_definition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -12936,6 +13860,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitNature_element_declaration" ):
                 listener.exitNature_element_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNature_element_declaration" ):
+                return visitor.visitNature_element_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -12996,6 +13926,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitNext_statement" ):
                 listener.exitNext_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNext_statement" ):
+                return visitor.visitNext_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13070,6 +14006,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitNumeric_literal" ):
                 listener.exitNumeric_literal(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitNumeric_literal" ):
+                return visitor.visitNumeric_literal(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13142,6 +14084,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitObject_declaration" ):
                 listener.exitObject_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitObject_declaration" ):
+                return visitor.visitObject_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13218,6 +14166,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitOpts" ):
                 listener.exitOpts(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitOpts" ):
+                return visitor.visitOpts(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13301,6 +14255,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPackage_body" ):
                 listener.exitPackage_body(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPackage_body" ):
+                return visitor.visitPackage_body(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13413,6 +14373,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitPackage_body_declarative_item" ):
                 listener.exitPackage_body_declarative_item(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPackage_body_declarative_item" ):
+                return visitor.visitPackage_body_declarative_item(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13523,6 +14489,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitPackage_body_declarative_part" ):
                 listener.exitPackage_body_declarative_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPackage_body_declarative_part" ):
+                return visitor.visitPackage_body_declarative_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13593,6 +14565,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPackage_declaration" ):
                 listener.exitPackage_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPackage_declaration" ):
+                return visitor.visitPackage_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13728,6 +14706,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPackage_declarative_item" ):
                 listener.exitPackage_declarative_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPackage_declarative_item" ):
+                return visitor.visitPackage_declarative_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -13881,6 +14865,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitPackage_declarative_part" ):
                 listener.exitPackage_declarative_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPackage_declarative_part" ):
+                return visitor.visitPackage_declarative_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13937,6 +14927,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitParameter_specification" ):
                 listener.exitParameter_specification(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParameter_specification" ):
+                return visitor.visitParameter_specification(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -13984,6 +14980,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPhysical_literal" ):
                 listener.exitPhysical_literal(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPhysical_literal" ):
+                return visitor.visitPhysical_literal(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14051,6 +15053,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPhysical_type_definition" ):
                 listener.exitPhysical_type_definition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPhysical_type_definition" ):
+                return visitor.visitPhysical_type_definition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14131,6 +15139,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitPort_clause" ):
                 listener.exitPort_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPort_clause" ):
+                return visitor.visitPort_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14178,6 +15192,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPort_list" ):
                 listener.exitPort_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPort_list" ):
+                return visitor.visitPort_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14230,6 +15250,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPort_map_aspect" ):
                 listener.exitPort_map_aspect(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPort_map_aspect" ):
+                return visitor.visitPort_map_aspect(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14304,6 +15330,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPrimary" ):
                 listener.exitPrimary(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrimary" ):
+                return visitor.visitPrimary(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14393,6 +15425,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPrimary_unit" ):
                 listener.exitPrimary_unit(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrimary_unit" ):
+                return visitor.visitPrimary_unit(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14495,6 +15533,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProcedural_declarative_item" ):
                 listener.exitProcedural_declarative_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProcedural_declarative_item" ):
+                return visitor.visitProcedural_declarative_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14612,6 +15656,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitProcedural_declarative_part" ):
                 listener.exitProcedural_declarative_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProcedural_declarative_part" ):
+                return visitor.visitProcedural_declarative_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14663,6 +15713,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProcedural_statement_part" ):
                 listener.exitProcedural_statement_part(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProcedural_statement_part" ):
+                return visitor.visitProcedural_statement_part(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14723,6 +15779,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitProcedure_call" ):
                 listener.exitProcedure_call(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProcedure_call" ):
+                return visitor.visitProcedure_call(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -14782,6 +15844,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProcedure_call_statement" ):
                 listener.exitProcedure_call_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProcedure_call_statement" ):
+                return visitor.visitProcedure_call_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -14880,6 +15948,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProcess_declarative_item" ):
                 listener.exitProcess_declarative_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProcess_declarative_item" ):
+                return visitor.visitProcess_declarative_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15003,6 +16077,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitProcess_declarative_part" ):
                 listener.exitProcess_declarative_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProcess_declarative_part" ):
+                return visitor.visitProcess_declarative_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15097,6 +16177,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProcess_statement" ):
                 listener.exitProcess_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProcess_statement" ):
+                return visitor.visitProcess_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15206,6 +16292,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitProcess_statement_part" ):
                 listener.exitProcess_statement_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProcess_statement_part" ):
+                return visitor.visitProcess_statement_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15271,6 +16363,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitQualified_expression" ):
                 listener.exitQualified_expression(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQualified_expression" ):
+                return visitor.visitQualified_expression(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15339,6 +16437,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitQuantity_declaration" ):
                 listener.exitQuantity_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQuantity_declaration" ):
+                return visitor.visitQuantity_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15413,6 +16517,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitQuantity_list" ):
                 listener.exitQuantity_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQuantity_list" ):
+                return visitor.visitQuantity_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15492,6 +16602,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitQuantity_specification" ):
                 listener.exitQuantity_specification(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitQuantity_specification" ):
+                return visitor.visitQuantity_specification(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15539,6 +16655,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRange_decl" ):
                 listener.exitRange_decl(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRange_decl" ):
+                return visitor.visitRange_decl(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15600,6 +16722,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitExplicit_range" ):
                 listener.exitExplicit_range(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExplicit_range" ):
+                return visitor.visitExplicit_range(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15652,6 +16780,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRange_constraint" ):
                 listener.exitRange_constraint(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRange_constraint" ):
+                return visitor.visitRange_constraint(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15710,6 +16844,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitRecord_nature_definition" ):
                 listener.exitRecord_nature_definition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRecord_nature_definition" ):
+                return visitor.visitRecord_nature_definition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -15792,6 +16932,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitRecord_type_definition" ):
                 listener.exitRecord_type_definition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRecord_type_definition" ):
+                return visitor.visitRecord_type_definition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15864,6 +17010,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitRelation" ):
                 listener.exitRelation(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRelation" ):
+                return visitor.visitRelation(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15928,6 +17080,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitRelational_operator" ):
                 listener.exitRelational_operator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRelational_operator" ):
+                return visitor.visitRelational_operator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -15989,6 +17147,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitReport_statement" ):
                 listener.exitReport_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReport_statement" ):
+                return visitor.visitReport_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16063,6 +17227,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitReturn_statement" ):
                 listener.exitReturn_statement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReturn_statement" ):
+                return visitor.visitReturn_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16134,6 +17304,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitScalar_nature_definition" ):
                 listener.exitScalar_nature_definition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScalar_nature_definition" ):
+                return visitor.visitScalar_nature_definition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16191,6 +17367,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitScalar_type_definition" ):
                 listener.exitScalar_type_definition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitScalar_type_definition" ):
+                return visitor.visitScalar_type_definition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16255,6 +17437,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSecondary_unit" ):
                 listener.exitSecondary_unit(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSecondary_unit" ):
+                return visitor.visitSecondary_unit(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16317,6 +17505,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSecondary_unit_declaration" ):
                 listener.exitSecondary_unit_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSecondary_unit_declaration" ):
+                return visitor.visitSecondary_unit_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16387,6 +17581,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSelected_signal_assignment" ):
                 listener.exitSelected_signal_assignment(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSelected_signal_assignment" ):
+                return visitor.visitSelected_signal_assignment(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16464,6 +17664,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSelected_waveforms" ):
                 listener.exitSelected_waveforms(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSelected_waveforms" ):
+                return visitor.visitSelected_waveforms(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16528,6 +17734,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSensitivity_clause" ):
                 listener.exitSensitivity_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSensitivity_clause" ):
+                return visitor.visitSensitivity_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16578,6 +17790,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSensitivity_list" ):
                 listener.exitSensitivity_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSensitivity_list" ):
+                return visitor.visitSensitivity_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16634,6 +17852,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSequence_of_statements" ):
                 listener.exitSequence_of_statements(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSequence_of_statements" ):
+                return visitor.visitSequence_of_statements(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16741,6 +17965,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSequential_statement" ):
                 listener.exitSequential_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSequential_statement" ):
+                return visitor.visitSequential_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -16885,6 +18115,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitShift_expression" ):
                 listener.exitShift_expression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitShift_expression" ):
+                return visitor.visitShift_expression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -16949,6 +18185,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitShift_operator" ):
                 listener.exitShift_operator(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitShift_operator" ):
+                return visitor.visitShift_operator(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17012,6 +18254,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSignal_assignment_statement" ):
                 listener.exitSignal_assignment_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSignal_assignment_statement" ):
+                return visitor.visitSignal_assignment_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -17100,6 +18348,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSignal_declaration" ):
                 listener.exitSignal_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSignal_declaration" ):
+                return visitor.visitSignal_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17169,6 +18423,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSignal_kind" ):
                 listener.exitSignal_kind(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSignal_kind" ):
+                return visitor.visitSignal_kind(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17229,6 +18489,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSignal_list" ):
                 listener.exitSignal_list(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSignal_list" ):
+                return visitor.visitSignal_list(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -17319,6 +18585,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSignature" ):
                 listener.exitSignature(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSignature" ):
+                return visitor.visitSignature(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17408,6 +18680,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSimple_expression" ):
                 listener.exitSimple_expression(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimple_expression" ):
+                return visitor.visitSimple_expression(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17492,6 +18770,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSimple_simultaneous_statement" ):
                 listener.exitSimple_simultaneous_statement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimple_simultaneous_statement" ):
+                return visitor.visitSimple_simultaneous_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17564,6 +18848,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSimultaneous_alternative" ):
                 listener.exitSimultaneous_alternative(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimultaneous_alternative" ):
+                return visitor.visitSimultaneous_alternative(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -17640,6 +18930,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSimultaneous_case_statement" ):
                 listener.exitSimultaneous_case_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimultaneous_case_statement" ):
+                return visitor.visitSimultaneous_case_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -17761,6 +19057,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSimultaneous_if_statement" ):
                 listener.exitSimultaneous_if_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimultaneous_if_statement" ):
+                return visitor.visitSimultaneous_if_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -17887,6 +19189,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSimultaneous_procedural_statement" ):
                 listener.exitSimultaneous_procedural_statement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimultaneous_procedural_statement" ):
+                return visitor.visitSimultaneous_procedural_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -17986,6 +19294,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSimultaneous_statement" ):
                 listener.exitSimultaneous_statement(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimultaneous_statement" ):
+                return visitor.visitSimultaneous_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18071,6 +19385,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSimultaneous_statement_part" ):
                 listener.exitSimultaneous_statement_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSimultaneous_statement_part" ):
+                return visitor.visitSimultaneous_statement_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18131,6 +19451,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSource_aspect" ):
                 listener.exitSource_aspect(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSource_aspect" ):
+                return visitor.visitSource_aspect(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18210,6 +19536,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSource_quantity_declaration" ):
                 listener.exitSource_quantity_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSource_quantity_declaration" ):
+                return visitor.visitSource_quantity_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18273,6 +19605,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitStep_limit_specification" ):
                 listener.exitStep_limit_specification(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStep_limit_specification" ):
+                return visitor.visitStep_limit_specification(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18333,6 +19671,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSubnature_declaration" ):
                 listener.exitSubnature_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubnature_declaration" ):
+                return visitor.visitSubnature_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18401,6 +19745,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSubnature_indication" ):
                 listener.exitSubnature_indication(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubnature_indication" ):
+                return visitor.visitSubnature_indication(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18495,6 +19845,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSubprogram_body" ):
                 listener.exitSubprogram_body(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubprogram_body" ):
+                return visitor.visitSubprogram_body(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18566,6 +19922,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSubprogram_declaration" ):
                 listener.exitSubprogram_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubprogram_declaration" ):
+                return visitor.visitSubprogram_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18656,6 +20018,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSubprogram_declarative_item" ):
                 listener.exitSubprogram_declarative_item(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubprogram_declarative_item" ):
+                return visitor.visitSubprogram_declarative_item(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18779,6 +20147,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSubprogram_declarative_part" ):
                 listener.exitSubprogram_declarative_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubprogram_declarative_part" ):
+                return visitor.visitSubprogram_declarative_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18830,6 +20204,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSubprogram_kind" ):
                 listener.exitSubprogram_kind(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubprogram_kind" ):
+                return visitor.visitSubprogram_kind(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -18879,6 +20259,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSubprogram_specification" ):
                 listener.exitSubprogram_specification(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubprogram_specification" ):
+                return visitor.visitSubprogram_specification(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -18945,6 +20331,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitProcedure_specification" ):
                 listener.exitProcedure_specification(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProcedure_specification" ):
+                return visitor.visitProcedure_specification(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19027,6 +20419,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitFunction_specification" ):
                 listener.exitFunction_specification(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFunction_specification" ):
+                return visitor.visitFunction_specification(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19102,6 +20500,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSubprogram_statement_part" ):
                 listener.exitSubprogram_statement_part(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubprogram_statement_part" ):
+                return visitor.visitSubprogram_statement_part(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19164,6 +20568,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSubtype_declaration" ):
                 listener.exitSubtype_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubtype_declaration" ):
+                return visitor.visitSubtype_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19222,6 +20632,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitSubtype_indication" ):
                 listener.exitSubtype_indication(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSubtype_indication" ):
+                return visitor.visitSubtype_indication(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19296,6 +20712,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitSuffix" ):
                 listener.exitSuffix(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSuffix" ):
+                return visitor.visitSuffix(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19363,6 +20785,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitTarget" ):
                 listener.exitTarget(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTarget" ):
+                return visitor.visitTarget(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19426,6 +20854,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitTerm" ):
                 listener.exitTerm(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTerm" ):
+                return visitor.visitTerm(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19484,6 +20918,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTerminal_aspect" ):
                 listener.exitTerminal_aspect(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTerminal_aspect" ):
+                return visitor.visitTerminal_aspect(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19549,6 +20989,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitTerminal_declaration" ):
                 listener.exitTerminal_declaration(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTerminal_declaration" ):
+                return visitor.visitTerminal_declaration(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19610,6 +21056,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitThrough_aspect" ):
                 listener.exitThrough_aspect(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitThrough_aspect" ):
+                return visitor.visitThrough_aspect(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19675,6 +21127,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitTimeout_clause" ):
                 listener.exitTimeout_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTimeout_clause" ):
+                return visitor.visitTimeout_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -19719,6 +21177,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitTolerance_aspect" ):
                 listener.exitTolerance_aspect(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTolerance_aspect" ):
+                return visitor.visitTolerance_aspect(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19774,6 +21238,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitType_declaration" ):
                 listener.exitType_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitType_declaration" ):
+                return visitor.visitType_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19841,6 +21311,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitType_definition" ):
                 listener.exitType_definition(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitType_definition" ):
+                return visitor.visitType_definition(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -19930,6 +21406,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitUnconstrained_array_definition" ):
                 listener.exitUnconstrained_array_definition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnconstrained_array_definition" ):
+                return visitor.visitUnconstrained_array_definition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20018,6 +21500,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitUnconstrained_nature_definition" ):
                 listener.exitUnconstrained_nature_definition(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnconstrained_nature_definition" ):
+                return visitor.visitUnconstrained_nature_definition(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20096,6 +21584,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitUse_clause" ):
                 listener.exitUse_clause(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUse_clause" ):
+                return visitor.visitUse_clause(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20166,6 +21660,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVariable_assignment_statement" ):
                 listener.exitVariable_assignment_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVariable_assignment_statement" ):
+                return visitor.visitVariable_assignment_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20243,6 +21743,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVariable_declaration" ):
                 listener.exitVariable_declaration(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVariable_declaration" ):
+                return visitor.visitVariable_declaration(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20328,6 +21834,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWait_statement" ):
                 listener.exitWait_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWait_statement" ):
+                return visitor.visitWait_statement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -20416,6 +21928,12 @@ class vhdlParser ( Parser ):
             if hasattr( listener, "exitWaveform" ):
                 listener.exitWaveform(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWaveform" ):
+                return visitor.visitWaveform(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -20487,6 +22005,12 @@ class vhdlParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitWaveform_element" ):
                 listener.exitWaveform_element(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWaveform_element" ):
+                return visitor.visitWaveform_element(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
